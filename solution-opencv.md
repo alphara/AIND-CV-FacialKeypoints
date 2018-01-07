@@ -24,9 +24,11 @@ error                                     Traceback (most recent call last)
 error: /Users/travis/build/skvark/opencv-python/opencv/modules/highgui/src/window.cpp:565: error: (-2) The function is not implemented. Rebuild the library with Windows, GTK+ 2.x or Carbon support. If you are on Ubuntu or Debian, install libgtk2.0-dev and pkg-config, then re-run cmake or configure script in function cvNamedWindow
  ``` 
 
+ Also got error that `pandas` and `sklearn` are not installed.
+
 I created new conda env, installed jupyter in that environment and updated version of ` opencv-python==3.4.0.12 `. I got the following script:
  ``` 
-conda create --name aind-cv-1 python=3.5 numpy tensorflow keras jupyter
+conda create --name aind-cv-1 python=3.5 numpy tensorflow keras jupyter pandas scikit-learn
 source activate aind-cv-1
 pip install -r requirements-1.txt
 KERAS_BACKEND=tensorflow python -c "from keras import backend"
